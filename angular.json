@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngRt32021"
+    }
+  },
+  "defaultProject": "ngRt32021",
+  "cli": {
+    "analytics": false
+  }
 }

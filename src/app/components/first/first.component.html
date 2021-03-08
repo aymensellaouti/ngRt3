@@ -1,0 +1,19 @@
+<p [style.color]="color" [hidden]="isHidden">{{ classe }} works!</p>
+
+<app-second></app-second>
+
+<!--
+  attributs (balises)
+  events
+ -->
+
+<input
+  (change)="changeColor(colorInput.value)"
+  type="text"
+  #colorInput
+  class="form-control"
+/>
+
+<input type="color" [(ngModel)]="color" class="form-control" />
+
+<button (click)="hide()" class="btn btn-danger">hide</button>

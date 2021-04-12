@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col">
+    <app-list (forwardCv)="selectItem($event)"></app-list>
+  </div>
+  <div class="col">
+    <app-detail [cv]="selectedItem"></app-detail>
+  </div>
+</div>

@@ -10,6 +10,12 @@ import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
 import { TwoComponent } from './components/two/two.component';
 import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
+import { PereComponent } from './components/pere/pere.component';
+import { FilsComponent } from './components/fils/fils.component';
+import { CvComponent } from './cv/cv/cv.component';
+import { ItemComponent } from './cv/item/item.component';
+import { ListComponent } from './cv/list/list.component';
+import { DetailComponent } from './cv/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { RotatingCardComponent } from './components/rotating-card/rotating-card.
     SecondComponent,
     ThirdComponent,
     TwoComponent,
-    RotatingCardComponent
+    RotatingCardComponent,
+    PereComponent,
+    FilsComponent,
+    CvComponent,
+    ItemComponent,
+    ListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

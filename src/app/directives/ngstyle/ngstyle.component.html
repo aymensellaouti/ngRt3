@@ -1,3 +1,4 @@
+<input type="text" appRainbow>
 <p
   [ngStyle]="{
     color: color,
@@ -8,6 +9,18 @@
 >
   ngstyle works!
 </p>
+
+<p
+  (click)="allumeEteindre()"
+  [ngClass]="{
+    ampoule: allume
+  }"
+>
+  test ngClass
+</p>
+
+<p appHighlight>Test Custom directive</p>
+<p appHighlight [in]="'pink'" [out]="'lightblue'">Test Custom directive</p>
 
 <div class="row">
   <div class="col">

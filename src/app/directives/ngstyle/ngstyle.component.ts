@@ -10,7 +10,11 @@ export class NgstyleComponent implements OnInit {
   @Input() color = 'gold';
   @Input() bgc = 'lightblue';
   @Input() font = 'verdana';
+  allume = true;
   constructor() {}
 
   ngOnInit(): void {}
+  allumeEteindre() {
+    this.allume = !this.allume;
+  }
 }

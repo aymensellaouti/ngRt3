@@ -9,15 +9,8 @@ import { Cv } from '../model/cv';
 export class ListComponent implements OnInit {
   cvs: Cv[] = [
     new Cv(1, 'sellaouti', 'aymen', 'teacher', 'as.jpg', 12345, 38),
-    new Cv(
-      2,
-      'Khelifi',
-      'Bilel',
-      'ing',
-      'rotating_card_profile3.png',
-      12345,
-      21
-    ),
+    new Cv(2, 'Khelifi', 'Bilel', 'ing', '', 12345, 21),
+    new Cv(3, 'Mellakh', 'Insaf', 'ing', '                  ', 12346, 21),
   ];
   @Output() forwardCv = new EventEmitter();
   constructor() {}

@@ -24,6 +24,11 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directvies/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { TodoComponent } from './todo/todo/todo.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
+import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { BackComponent } from './pages/back/back.component';
+import { FrontComponent } from './pages/front/front.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +49,11 @@ import { TodoComponent } from './todo/todo/todo.component';
     RainbowDirective,
     DefaultImagePipe,
     TodoComponent,
+    NavbarComponent,
+    DetailCvComponent,
+    AddCvComponent,
+    BackComponent,
+    FrontComponent,
   ],
   imports: [
     BrowserModule,

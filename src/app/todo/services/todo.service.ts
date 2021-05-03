@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Todo } from '../Model/todo';
 import { LoggerService } from '../../services/logger.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class TodoService {
   todos: Todo[] = [];
   constructor(private loggerService: LoggerService) {}

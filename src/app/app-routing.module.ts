@@ -9,6 +9,7 @@ import { SecondComponent } from './components/second/second.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { BackComponent } from './pages/back/back.component';
 import { FrontComponent } from './pages/front/front.component';
+import { LoginComponent } from './pages/login/login.component';
 
 /*
   il prend le segment demandé
@@ -19,6 +20,7 @@ import { FrontComponent } from './pages/front/front.component';
 const routes: Routes = [
   { path: '', component: FirstComponent },
   { path: 'cv', component: CvComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'cv/add', component: AddCvComponent },
   { path: 'cv/:id', component: DetailCvComponent },
   { path: 'todo', component: TodoComponent },

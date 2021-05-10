@@ -29,6 +29,7 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { BackComponent } from './pages/back/back.component';
 import { FrontComponent } from './pages/front/front.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { FrontComponent } from './pages/front/front.component';
     AddCvComponent,
     BackComponent,
     FrontComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

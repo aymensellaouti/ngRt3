@@ -27,6 +27,13 @@
         >Cv</a
       >
       <a
+        *ngIf="authService.isAuthenitcated()"
+        class="nav-item nav-link"
+        [routerLink]="['cv/add']"
+        routerLinkActive="active text-primary"
+        >Add Cv</a
+      >
+      <a
         class="nav-item nav-link"
         [routerLink]="['todo']"
         routerLinkActive="active text-primary"
@@ -39,10 +46,17 @@
         >Two</a
       >
       <a
+        *ngIf="!authService.isAuthenitcated()"
         class="nav-item nav-link"
         [routerLink]="['login']"
         routerLinkActive="active text-primary"
         >Login</a
+      >
+      <a
+        *ngIf="authService.isAuthenitcated()"
+        class="nav-item nav-link"
+        (click)="logout()"
+        >Logout</a
       >
     </div>
   </div>

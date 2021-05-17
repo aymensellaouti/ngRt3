@@ -10,6 +10,7 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { BackComponent } from './pages/back/back.component';
 import { FrontComponent } from './pages/front/front.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guardes/auth.guard';
 
 /*
   il prend le segment demandé
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: '', component: FirstComponent },
   { path: 'cv', component: CvComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'cv/add', component: AddCvComponent },
+  { path: 'cv/add', component: AddCvComponent, canActivate: [AuthGuard] },
   { path: 'cv/:id', component: DetailCvComponent },
   { path: 'todo', component: TodoComponent },
   {

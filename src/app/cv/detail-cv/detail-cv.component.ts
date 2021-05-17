@@ -20,15 +20,23 @@ export class DetailCvComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      this.cv = this.cvService.getCvById(+params.id);
-      if (!this.cv) {
-        this.router.navigate([ROUTES.cv]);
-      }
+      this.cvService.getCvById(+params.id).subscribe(
+        (cv) => this.cv = cv,
+        (erreur) => this.router.navigate([ROUTES.cv])
+      );
     });
   }
   deleteCv() {
-    this.cvService.deleteCv(this.cv);
-    this.toaster.success(`le cv a supprimé avec succès`);
-    this.router.navigate([ROUTES.cv]);
+    this.cvService.deleteCv(this.cv).subscribe(
+      (success) => {
+        this.toaster.success(`le cv a supprimé avec succès`);
+        this.router.navigate([ROUTES.cv]);
+      },
+      (erreur) => {
+        console.log(erreur)
+      }
+    );
+
+
   }
 }

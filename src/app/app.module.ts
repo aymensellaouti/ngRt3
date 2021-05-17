@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,7 @@ import { AddCvComponent } from './cv/add-cv/add-cv.component';
 import { BackComponent } from './pages/back/back.component';
 import { FrontComponent } from './pages/front/front.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,7 @@ import { LoginComponent } from './pages/login/login.component';
     AddCvComponent,
     BackComponent,
     FrontComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +66,8 @@ import { LoginComponent } from './pages/login/login.component';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
-  ],
-  providers: [],
+    HttpClientModule],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
